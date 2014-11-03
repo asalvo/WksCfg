@@ -36,7 +36,7 @@ param(
 function InstallDotNet35
 {
     Write-Host 'Enabling/Installing DotNet 3.5'
-    Install-WindowsFeature NET-Framework-Core -Source 'C:\Temp\sources\Sxs\'
+    Install-WindowsFeature NET-Framework-Core -Source 'p:\Updates\Windows2012R2\sources\sxs'
 }
 
 #################################################################
@@ -66,10 +66,16 @@ if ($installChoco) {
 Install-WindowsFeature NET-Framework-45-Core
 
 #install common stuff
+cinst githubforwindows  #GitHub sometimes needs some help
 cinst google-chrome-x64
 cinst notepadplusplus
-cinst webpicmd
-cinst githubforwindows
+#cinst webpicmd #thought this was needed to install some stuff, but not needed so far
+cinst nunit #For editing nunit project files to run on Jenkins
+
+#Extra stuff for Jenkns Slave
+#cinst github.install 
+#cinst jre8
+
 
 #Sql Management Studio and Sql Server
 if ($installSSDB -or $installSSMS) {
