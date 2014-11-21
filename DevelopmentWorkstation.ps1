@@ -69,8 +69,8 @@ Install-WindowsFeature NET-Framework-45-Core
 cinst githubforwindows  #GitHub sometimes needs some help
 cinst google-chrome-x64
 cinst notepadplusplus
-#cinst webpicmd #thought this was needed to install some stuff, but not needed so far
 cinst nunit #For editing nunit project files to run on Jenkins
+cinst resharper
 
 #Extra stuff for Jenkns Slave
 #cinst github.install 
