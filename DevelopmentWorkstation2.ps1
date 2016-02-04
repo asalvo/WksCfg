@@ -12,9 +12,11 @@ cinst notepadplusplus -y
 cinst fiddler4 -y
 cinst 7zip -y
 cinst sysinternals -y
+cinst nodejs.install
 cinst resharper -y
 cinst github  -y #GitHub sometimes needs some help
 
+#Requires Boxstarter
 Install-ChocolateyVsixPackage SqlLiteToolbox https://visualstudiogallery.msdn.microsoft.com/0e313dfd-be80-4afb-b5e9-6e74d369f7a1/file/29445/76/SqlCeToolbox.4.3.0.2.vsix
  
 #cinst dotnet3.5 -y #doesn't work?
